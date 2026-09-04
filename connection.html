@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Red's Cyber Nook</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/6783/6783360.png">
+
+
+    <style>
+
+        
+        html, body {
+           margin: 0;
+           padding: 0;
+           height: 100%;
+           width: 100%;
+        }
+
+        body {
+           background-repeat no-repeat;
+           background-position: center;
+           background-size: cover;
+           background-color: #333333;
+           overflow: hidden; 
+           position: relative;
+           background-attachment: fixed;
+           background-image: url("https://i.pinimg.com/736x/c2/c2/10/c2c21067269ee6b6c0f30be4840f00fa.jpg");
+        }
+
+        .text-box {
+            text-align: center;
+            position: relative;
+            font-family: 'VT323', monospace;
+            top: 5%;
+            left: 5%;
+            color: #000000;
+            max-width: 700px;
+            transform: translateY(-50%); 
+            z-index: 5;
+            margin-top: 20px;
+        }    
+        
+        h1 {
+           text-align: center;
+           font-size: 50px;
+           white-space: nowrap;
+           border-right: 3px solid #000000;
+           animation: typing 05s steps(20), blink 0.7s infinite;
+        }
+        @keyframes typing {
+             from { width: 0; }
+             to { width: 100%; }
+        }
+
+        @keyframes blink {
+             50% { border-color: transparent; }
+        }
+
+        .back-box {
+            position: fixed;
+            right: 12px;
+            bottom: 12px;
+            color: #000000;
+            font-family: 'VT323', monospace;
+        }
+
+        .image-map {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-map img {
+             width: 100%;
+            display: block;
+        }
+
+        .spot {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .spot-resume
+         { top: 47%; left: 4%;}
+        .spot-phone { top: 47%; left: 31%; }
+        .spot-email { top: 47%; left: 58%; }
+        .spot4 { top: 47%; left: 84%; }
+
+        .spot:hover {
+            box-shadow: 0 0 20px #ff0000;
+            border-radius: 50%;
+            background: rgba(255,0,0,0.3);
+        }         
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="page-wrapper"></div>
+
+        <div 
+    
+        class="text-box">
+            <h1>Connection Ports</h1>
+
+        </div>
+
+        <div
+    
+        class="back-box">
+            <a href="index.html" class="nav-btn">Back to Nook</a>
+
+        </div>
+
+        <div 
+    
+        class="image-map">
+            <img src="https://paleblueearth.com/cdn/shop/articles/USB_Ports_1000x.webp?v=1754335060" alt="map">
+            <a href="James_A.pdf" target="_blank" class="spot spot-resume"></a>
+            <a href="tel:9856451621" class="spot spot-phone"></a>
+            <a href="mailto:marbusiness98@gmail.com?subject=Contact%20Amari&body=Hey%20Amari," class="spot spot-email"></a>
+            <a href="https://linkedin.com/in/amari-james" class="spot spot4"></a>
+
+        </div>
+        
+    </div>
+
+
+</body>
+
+
+</html>
