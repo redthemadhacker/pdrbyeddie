@@ -6,7 +6,7 @@
 
 
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"  rel="stylesheet">
     <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
 
@@ -30,17 +30,20 @@
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
         }
 
         .text-box {
             text-align: center;
             position: relative;
-            font-family: 'VT323', monospace;
+            font-family: 'Oswald' sans-serif; 
             top: 5%;
             left: 5%;
             color: #000000;
-            max-width: 700px;
-            transform: translateY(-50%); 
+            max-width: 1200px;
             z-index: 5;
             margin-top: 20px;
         }    
@@ -49,8 +52,6 @@
            text-align: center;
            font-size: 50px;
            white-space: nowrap;
-           border-right: 3px solid #000000;
-           margin-left: 130%;
         }
    
 
@@ -66,6 +67,27 @@
             text-align: center;
         }
 
+         p {
+           font-size: 30px;
+           margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            width: 90%;
+            text-align: center;
+        }
+
     </style>
 
 
@@ -78,7 +100,20 @@
     
         class="text-box">
         
-        <h1>FAQ</h1>
+        <h1>How long can I expect the repair to take?</h1>
+        <div class="content-container">
+        <p> Most repairs are completed in 30 minutes to 2 hours, depending on the size, location, and difficulty of the 
+        dent. Unlike traditional body shops that keep your car for days or weeks, we get you back on the road the very same day.</p>
+        <ul>
+            <li><strong>Fast Turnaround:</strong> Minor dings and hail spots are usually fixed in under an hour while you wait.</li>
+            <li><strong>Flexible Scheduling:</strong>  Appointments are set up at your convenience, usually within a few days 
+            of your initial call.</li>
+            <li><strong>Job Difficulty:</strong> Larger or deeper dents in hard-to-reach areas might take a bit longer, but we’ll 
+            always give you a clear time estimate before starting.</li>
+            <li><strong>Zero Waiting for Paint to Dry:</strong> Since there are no fillers, primers, or paint involved, there’s 
+            no curing time. As soon as the metal is massaged flat, your car is ready to go.</li>
+        </ul>    
+        </div>
 
       </div>    
 

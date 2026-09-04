@@ -6,7 +6,7 @@
 
 
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"  rel="stylesheet">
     <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
 
@@ -30,17 +30,20 @@
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
         }
 
         .text-box {
             text-align: center;
             position: relative;
-            font-family: 'VT323', monospace;
+            font-family: 'Oswald' sans-serif; 
             top: 5%;
             left: 5%;
             color: #000000;
-            max-width: 700px;
-            transform: translateY(-50%); 
+            max-width: 1200px;
             z-index: 5;
             margin-top: 20px;
         }    
@@ -49,8 +52,6 @@
            text-align: center;
            font-size: 50px;
            white-space: nowrap;
-           border-right: 3px solid #000000;
-           margin-left: 130%;
         }
    
 
@@ -66,6 +67,27 @@
             text-align: center;
         }
 
+         p {
+           font-size: 30px;
+           margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            width: 90%;
+            text-align: center;
+        }
+
     </style>
 
 
@@ -78,7 +100,23 @@
     
         class="text-box">
         
-        <h1>FAQ</h1>
+        <h1>What is paintless dent repair?</h1>
+        <div class="content-container">
+        <p> Paintless Dent Repair (PDR) is the fastest, cleanest way to get rid of dents, dings, 
+        and hail damage without messing up your car's original factory paint. Instead of slapping 
+        body filler over the damage or spending thousands on a fresh paint job, we use specialized 
+        tools to carefully massage the metal back into its original shape from the inside out.</p>
+        <ul>
+            <li><strong>Keeps Your Factory Paint:</strong> No repainting means zero risk of mismatched colors or peeling 
+            down the road. Your car keeps its original finish and its resale value.</li>
+            <li><strong>Saves You Money:</strong>  Without the high cost of paint, clear coat, 
+            and heavy shop labor, repairs stay affordable.</li>
+            <li><strong>Back on the Road Fast:</strong> Most repairs take just a couple of hours—not days or weeks like 
+            traditional body shops.</li>
+            <li><strong>Zero Chemicals or Fillers:</strong> It’s a clean, eco-friendly process that fixes the actual metal 
+            rather than just hiding the damage.</li>
+        </ul>    
+        </div>
 
       </div>    
 

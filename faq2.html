@@ -6,7 +6,7 @@
 
 
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"  rel="stylesheet">
     <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
 
@@ -30,17 +30,20 @@
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
         }
 
         .text-box {
             text-align: center;
             position: relative;
-            font-family: 'VT323', monospace;
+            font-family: 'Oswald' sans-serif; 
             top: 5%;
             left: 5%;
             color: #000000;
-            max-width: 700px;
-            transform: translateY(-50%); 
+            max-width: 1200px;
             z-index: 5;
             margin-top: 20px;
         }    
@@ -49,8 +52,6 @@
            text-align: center;
            font-size: 50px;
            white-space: nowrap;
-           border-right: 3px solid #000000;
-           margin-left: 130%;
         }
    
 
@@ -66,18 +67,54 @@
             text-align: center;
         }
 
+         p {
+           font-size: 30px;
+           margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        li {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            width: 90%;
+            text-align: center;
+        }
+
     </style>
 
 
 </head>
 
- <body>
+
+<body>
 
     <div 
     
         class="text-box">
         
-        <h1>FAQ</h1>
+        <h1>How do you remove the dents?</h1>
+        <div class="content-container">
+        <p> Paintless Dent Repair (PDR) is all about using specialized tools and hand technique to physically manipulate 
+        metal back into its original factory shape—without damaging the clear coat or paint.</p>
+        <ul>
+            <li><strong>Specialized Steel Rods & Picks:</strong> We use dozens of custom-forged steel rods in different lengths, bends, 
+            and tip styles. These let us reach deep inside door panels, fenders, and roofs to carefully massage the metal out from behind.</li>
+            <li><strong>LED Reflector Boards:</strong>  To see every detail of the damage, we shine specialized LED boards on the panel. The 
+            reflected lines bend around the dent, showing us the exact micro-points that need to be adjusted.</li>
+            <li><strong>Glue-Pulling Systems:</strong> When we can't access the back of a panel, we use high-strength pulling tabs attached directly 
+            to the exterior. Using specialized lifters or slide hammers, we pull the metal up safely from the outside without touching your paint.</li>
+            <li><strong>Tap-Down & Knock-Down Tools:</strong> High spots are just as important as low spots. We use soft-tipped plastic or brass tools 
+            to gently tap down high edges, relaxing the tension in the metal so the whole panel flattens back out smoothly.</li>
+        </ul>    
+        </div>
 
       </div>    
 
