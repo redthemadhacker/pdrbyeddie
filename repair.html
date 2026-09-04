@@ -82,37 +82,63 @@
         text-align: center;
         }
 
-        .form {
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
-            margin-top: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px; 
-            background: #111;
+        form, .form {
+            width: 90% !important;
+            max-width: 450px !important;
+            margin: 30px auto !important;
+            background: #111111;
             padding: 25px; 
             border-radius: 10px;
-            border: 2px solid #ffffff;
+            border: 2px solid #ff0000;
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            box-sizing: border-box;
         }
 
-        .label {
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .form-group label {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
             text-align: left;
-            font-weight: 600;
-            color: #ff0000;
-            margin-top: 25px;
-            margin-bottom: 6px; 
         }
 
-        .form input,
-        .form textarea {
+        .form-group input,
+        .form-group textarea {
+            width: 100% !important;
             padding: 10px;
-            border: 2px solid #ffffff;
-            background-color: #0a0a0a;
-            color: white;
+            border: 2px solid #ff0000;
+            background-color: #ffffff !important; 
+            color: #000000 !important;            
             border-radius: 6px;
             font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666666;
+        }
+
+        .form button,
+        form button {
+            width: 100%;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
         }
 
         .button {
@@ -121,7 +147,7 @@
             color: #fff;
             font-weight: 700;
             border: none;
-            border-radius: 10px;
+            border-radius: 0px;
             cursor: pointer;
             font-size: 16px;
             font-family: 'VT323', monospace;
@@ -139,6 +165,11 @@
         }
 
         .phone-icon {
+            width: 50px; 
+            height: auto;
+        }
+
+         .text-icon {
             width: 50px; 
             height: auto;
         }
@@ -164,8 +195,8 @@
             align-items: center;
             gap: 5px; 
             flex-wrap: nowrap;
-            margin-top: 130px;
-            margin-left: 43%;
+            margin-top: 90px;
+            margin-left: 42%;
         }
 
 
@@ -184,25 +215,40 @@
 
     </div>
 
-  <form action="https://formspree.io/f/mvkoqqje" method="POST">
+  <form class="form"  action="https://formspree.io/f/mvkoqqje" method="POST">
 
-  <div class="form">
-    <div class="label">Name</div>
-    <input type="text" name="name" required>
-  </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+    </div>
 
-  <div class="form">
-    <div class="label">Email</div>
-    <input type="email" name="email" required>
-  </div>
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+    </div>
 
-  <div class="form">
-    <div class="label">Request</div>
-    <textarea name="message" required></textarea>
-  </div>
+    <div class="form-group">
+        <label for="year">Vehicle Year:</label>
+        <input type="number" id="year" name="year" required placeholder="2026">
+    </div>
 
-  <button class="button">Done</button>
-  </form></div>
+    <div class="form-group">
+        <label for="make">Vehicle Make:</label>
+        <input type="text" id="make" name="make" required placeholder="Toyota">
+    </div>
+
+    <div class="form-group">
+        <label for="model">Vehicle Model:</label>
+        <input type="text" id="model" name="model" required placeholder="Camry XSE">
+    </div>
+
+    <div class="form-group">
+        <label for="message">Dent details:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Where is the dent located on the car?"></textarea>
+    </div>
+
+    <button type="submit">Submit Request</button>
+    </form>
 
   <div id="result"></div>
 
@@ -219,6 +265,22 @@
             alt="Phone"
             
             class="phone-icon">
+            
+            </a>
+        
+        </div>  
+
+        <div class="image-map">
+        
+            <a href="sms:7068888625?body=Hi!%20Here%20is%20a%20photo%20of%20my%20dent:" class="spot spot-text">
+            
+            <img
+            
+            src="https://thumbs.dreamstime.com/b/text-message-phone-icon-flat-vector-illustration-design-text-message-phone-icon-flat-vector-illustration-design-isolated-white-158418276.jpg"
+            
+            alt="Text"
+            
+            class="text-icon">
             
             </a>
         
