@@ -6,8 +6,8 @@
 
 
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>PDR by Eddie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
 
 
@@ -39,7 +39,7 @@
         .text-box {
             text-align: center;
             position: relative;
-            font-family: 'VT323', monospace;
+            font-family: 'Oswald' , monospace;
             top: 5%;
             left: 5%;
             color: #000000;
@@ -51,13 +51,8 @@
            text-align: center;
            font-size: 50px;
            white-space: nowrap;
-           border-right: 3px solid #000000;
            margin-top: 40px;
-           animation: typing 05s steps(20), blink 0.7s infinite;
-        }
-        @keyframes typing {
-             from { width: 0; }
-             to { width: 100%; }
+
         }
 
         @keyframes blink {
@@ -69,42 +64,8 @@
             right: 12px;
             bottom: 12px;
             color: #000000;
-            font-family: 'VT323', monospace;
+            font-family: 'Oswald' , sans-serif;
         }
-
-        .log-container {
-            width: 80%;
-            max-width: 900px;
-            margin: 40px auto;
-            margin-top: 100px;
-        }
-
-        .log-entry {
-            opacity: 0;
-            transform: translateY(40px);
-            animation: flyIn 0.8s ease-out forwards;
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid #000000;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px #000000;
-            text-align: center;
-        }
-
-        @keyframes flyIn {
-            to {
-            opacity: 1;
-            transform: translateY(0);
-            }
-        }
-
-        .log-entry:nth-child(1) { animation-delay: .5s; }
-        .log-entry:nth-child(2) { animation-delay: 1s; }
-        .log-entry:nth-child(3) { animation-delay: 1.5s; }
-        .log-entry:nth-child(4) { animation-delay: 2s; }
-        .log-entry:nth-child(5) { animation-delay: 2.5s; }
-        .log-entry:nth-child(6) { animation-delay: 3s; }
 
         ul {
             margin: 10px 0 0 20px;
