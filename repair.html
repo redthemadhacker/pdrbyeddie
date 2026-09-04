@@ -36,18 +36,7 @@
            background-attachment: fixed;
            /* (CONSTRUCTION) background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-OMaAal5Ljp8agQJbkM7PBLJFOW_HFdcR8nH3-GvFA&s=10"); */
            background-image:  url("pdr.png");
-        }
-
-        .text-box {
-            text-align: center;
-            position: relative;
-            font-family: 'VT323', monospace;
-            top: 5%;
-            left: 5%;
-            color: #000000;
-            max-width: 700px;
-            transform: translateY(-50%); 
-        }    
+        }  
         
         h1 {
            text-align: center;
@@ -164,6 +153,40 @@
             background: #ff3333;
         }
 
+        .facebook-icon {
+            width: 50px; 
+            height: auto;
+        }
+
+        .phone-icon {
+            width: 50px; 
+            height: auto;
+        }
+
+        .instagram-icon {
+            width: 65px; 
+            height: auto;
+        }
+
+        .twitter-icon {
+            width: 50px; 
+            height: auto;
+        }
+
+
+        .pinterest-icon {
+            width: 35px; 
+            height: auto;
+        }
+
+        .page-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0px; 
+            flex-wrap: nowrap;
+        }
+
+
     </style>
 
 
@@ -201,7 +224,87 @@
 
   <div id="result"></div>
 
-    <div class="page-wrapper"></div>
+    <div class="page-wrapper">
+
+        <div class="image-map">
+        
+            <a href="tel:7068888625" class="spot spot-phone">
+            
+            <img
+            
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyK6My_K7xY6jrEHbdExcj_A7TTiU69wUMq5tTgHrRDJJPv3LlT3_mWM&s=10"
+            
+            alt="Phone"
+            
+            class="phone-icon">
+            
+            </a>
+        
+        </div>  
+
+        <div class="image-map">
+        
+            <a href="https://www.facebook.com/PDRbyEddie/" target="_blank" rel="noopener noreferrer">
+            
+            <img
+            
+            src="https://img.magnific.com/premium-vector/vector-facebook-social-media-icon-illustration_534308-21672.jpg?semt=ais_hybrid&w=740&q=80"
+            
+            alt="Facebook"
+            
+            class="facebook-icon">
+            
+            </a>
+        
+        </div>  
+
+            <div class="image-map">
+        
+            <a href="https://www.instagram.com/PDRbyEddie/" target="_blank" rel="noopener noreferrer">
+            
+            <img
+            
+            src="https://img.magnific.com/premium-vector/circle-instagram-logotype-icon-social-media-app-network-application-popular-editorial-brand-vector-illustration_913857-383.jpg?semt=ais_hybrid&w=740&q=80"
+            
+            alt="Instagram"
+            
+            class="instagram-icon">
+            
+            </a>
+        
+        </div>  
+
+            <div class="image-map">
+        
+            <a href="https://www.twitter.com/PDRbyEddie" target="_blank" rel="noopener noreferrer">
+            
+            <img
+            
+            src="https://img.magnific.com/premium-vector/circle-twitter-x-logo-social-media-app-button_197792-9716.jpg?semt=ais_hybrid&w=740&q=80"
+            
+            alt="Twitter"
+            
+            class="twitter-icon">
+            
+            </a>
+        
+        </div> 
+
+            <div class="image-map">
+        
+            <a href="https://www.pinterest.com/PDRbyEddieLugtu/" target="_blank" rel="noopener noreferrer">
+            
+            <img
+            
+            src="https://cdn-icons-png.flaticon.com/512/145/145808.png"
+            
+            alt="Pinterest"
+            
+            class="pinterest-icon">
+            
+            </a>
+        
+        </div> 
 
         <div
     
@@ -214,60 +317,6 @@
 
 
     <div class="bg"></div>
-
-    <!-- <div>
-
-    <div class="growth-container">
-    <div class="columns"></div>
-
-      <div class="left-column"></div>
-        <div class="growth-box">
-            <h2>CompTIA CySA+ - Cybersecurity Analyst</h2>
-            <p> Honing skills in threat detection, incident response, SIEM analysis, vulnerability management, 
-            and security operations. Currently providing freelance threat analysis, SIEM monitoring, and security 
-            support for client environments.</p>
-        </div>
-
-         <div class="growth-box">
-            <h2>Linux Professional Institute LPIC-1 - Linux Administrator</h2>
-            <p>Studying Linux fundamentals, system architecture, command‑line operations, package management, 
-            networking basics, and essential troubleshooting. Developing and managing projects in Ubuntu on a daily 
-            basis to deepen command‑line proficiency and practical Linux administration experience.</p>
-        </div>   
-
-        <div class="growth-box">
-            <h2>GitHub</h2>
-            <p>Active repos, version control, project documentation.</p>
-        </div>
-
-         <div class="growth-box">
-            <h2>CTF</h2>
-            <p>CTF exercises, SIEM‑style analysis, real‑world attack simulation.</p>
-        </div>
-
-      <div class="growth-container"></div>  
-      <div class="right-column"></div>
-        <div class="growth-box">
-            <h2>Web Projects</h2>
-            <p>Custom portfolio pages, booking sites, and lightweight business webpages built with clean, responsive design.</p>
-            <a href="mailto:marbusiness98@gmail.com?subject=Contact%20Amari&body=Hey%20Amari," class="service-btn">Request Web Work</a>
-        </div> 
-
-        <div class="growth-box">
-            <h2>Tech Support</h2>
-            <p>WiFi troubleshooting, router optimization, device setup, and home network stability improvements.</p>
-            <a href="mailto:marbusiness98@gmail.com?subject=Contact%20Amari&body=Hey%20Amari," class="service-btn">Request Tech Support</a>
-        </div>
-
-        <div class="growth-box">
-            <h2>Cybersecurity</h2>
-            <p>Firewall configuration, secure network setup, malware removal, and basic security hardening.</p>
-            <a href="mailto:marbusiness98@gmail.com?subject=Contact%20Amari&body=Hey%20Amari," class="service-btn">Request Security Help</a>
-        </div>
-
-
-    </div> -->
-
    
 
 </body>
