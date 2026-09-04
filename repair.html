@@ -35,7 +35,7 @@
            text-align: center;
            background-attachment: fixed;
            /* (CONSTRUCTION) background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-OMaAal5Ljp8agQJbkM7PBLJFOW_HFdcR8nH3-GvFA&s=10"); */
-           background-image: url(""); 
+           background-image:  url("pdr.png");
         }
 
         .text-box {
@@ -73,44 +73,6 @@
             color: #000000;
             font-family: 'VT323', monospace;
         }
-
-        .log-container {
-            width: 80%;
-            max-width: 900px;
-            margin: 40px auto;
-            margin-top: 100px;
-        }
-
-        .log-entry {
-            opacity: 0;
-            transform: translateY(40px);
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid #000000;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 15px #000000;
-            margin-bottom: 20px;
-            text-align: center;
-            animation: flyInSide 0.8s ease-out forwards;
-        }
-
-        .log-entry:nth-of-type(1) {
-            animation-delay: 1s;
-            transform: translateX(-60px);
-        }
-        .log-entry:nth-of-type(2) {
-            animation-delay: 2s;
-            transform: translateX(60px);
-        }
-        .log-entry:nth-of-type(3) {
-            animation-delay: 3s;
-            transform: translateX(-60px);
-        }
-        .log-entry:nth-of-type(4) {
-            animation-delay: 4s;
-            transform: translateX(60px);
-        }
-
   
 
         @keyframes flyInSide {
@@ -135,12 +97,72 @@
             height: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: top-left;
             z-index: -1;
-            background-image: url(""); 
+            background-image: url("pdr.png"); 
         }
 
+        body {
+        background: #0a0a0a;
+        color: #ff0000;
+        font-family: 'VT323', monospace;
+        padding: 40px;
+        text-align: center;
+        }
 
+        h1 {
+            color: #ff0000;
+            margin-bottom: 25px;
+        }
+
+        .form {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px; 
+            background: #111;
+            padding: 25px; 
+            border-radius: 10px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .label {
+            text-align: left;
+            font-weight: 600;
+            color: #ff0000;
+            margin-top: 25px;
+            margin-bottom: 6px; 
+        }
+
+        .form input,
+        .form textarea {
+            padding: 10px;
+            border: 2px solid #ff0000;
+            background-color: #0a0a0a;
+            color: white;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .button {
+            padding: 12px;
+            background: #ff0000;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'VT323', monospace;
+            transition: background 0.2s ease;
+        }
+
+        .button:hover {
+            background: #ff3333;
+        }
 
     </style>
 
@@ -150,6 +172,34 @@
 
 <body>
 
+     <div 
+    
+    class="text-box">
+         <h1>Repair Hotline</h1>
+
+    </div>
+
+  <form action="" method="POST">
+
+  <div class="form">
+    <div class="label">Name</div>
+    <input type="text" name="name" required>
+  </div>
+
+  <div class="form">
+    <div class="label">Email</div>
+    <input type="email" name="email" required>
+  </div>
+
+  <div class="form">
+    <div class="label">Request</div>
+    <textarea name="message" required></textarea>
+  </div>
+
+  <button class="button">Done</button>
+  </form>
+
+  <div id="result"></div>
 
     <div class="page-wrapper"></div>
 
@@ -162,12 +212,6 @@
         
     </div>
 
- <div 
-    
-    class="text-box">
-         <h1>Repair Hotline</h1>
-
-    </div>
 
     <div class="bg"></div>
 
