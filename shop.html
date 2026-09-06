@@ -27,21 +27,16 @@
            background-size: cover;
            background-color: #333333;
            overflow-y: auto; 
-           position: center;
            background-attachment: fixed;
            background-image: url("pdr.png");
         }
 
         .text-box {
             text-align: center;
-            position: relative;
             font-family: 'Oswald', sans-serif;
-            top: 5%;
-            left: 5%;
             color: #000000;
             max-width: 700px;
-            z-index: 5;
-            margin-top: 20px;
+            margin-top: 20px auto;
         }    
         
         h1 {
@@ -79,7 +74,6 @@
         .video-container {
             max-width: 400px; 
             border: 2px solid #ff0000;
-            position: center;
             width: 100%;
             max-width: 400px;
             aspect-ratio: 16 / 9;
@@ -93,6 +87,13 @@
             border-radius: 8px;
         }
 
+        .content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
 
     </style>
 
@@ -102,22 +103,25 @@
 
 <body>
 
-    <div 
-    
-        class="text-box">
 
-        <h1>Inside the Shop</h1> 
-
-
-        <div class="video-container">
+        <div class="content-wrapper">
+            <div class="text-box">
+            <h1>Inside the Shop</h1> 
+            </div>
+            <div class="video-container">
             <iframe 
             src="https://www.youtube.com/embed/watch?v=0g1Q4fBDp2U"
             title="Placeholder Video!!!"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
-            </iframe>
+            </iframe>            </div>
         </div>
+
+
+    <div 
+    
+        class="text-box">        
 
         <a href="faq1.html" class="faq-btn">What is paintless dent repair?</a>
         <a href="faq2.html" class="faq-btn">How do you remove the dents?</a>
