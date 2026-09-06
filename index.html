@@ -158,32 +158,57 @@
             font-size: 20px;
         }
 
-        .image-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-        .image-modal img {
-            max-width: 98vw;
-            max-height: 95vh;
-            border: 3px solid #ff0000;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
+.zoom-controls {
+    position: absolute;
+    top: 20px;
+    z-index: 10000;
+    display: flex;
+    gap: 10px;
+}
+
+.zoom-controls button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.img-wrapper {
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Adds scrollbars if zoomed way past edge */
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid #ff0000;
+    transition: transform 0.15s ease-out;
+    cursor: grab;
+}
 
                    /* Responsive Fix for Mobile Screens */
        @media (max-width: 768px) {
@@ -264,9 +289,17 @@
 
     </div>    
 
-    <div id="imageModal" class="image-modal" onclick="closeModal()">
+  <div id="imageModal" class="image-modal">
+    <div class="zoom-controls">
+        <button onclick="zoomIn(event)">+</button>
+        <button onclick="zoomOut(event)">–</button>
+        <button onclick="resetZoom(event)">Reset</button>
+        <button onclick="closeModal()">✕ Close</button>
+    </div>
+    <div class="img-wrapper" onclick="event.stopPropagation()">
         <img id="enlargedImg" src="" alt="Enlarged View">
     </div>
+</div>
 
     <div class="button-box">
         <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
@@ -276,16 +309,41 @@
 
     </div>
 
-    <script>
-        function openModal(imageSrc) {
-            document.getElementById('enlargedImg').src = imageSrc;
-            document.getElementById('imageModal').style.display = 'flex';
-        }
+ <script>
+    let currentZoom = 1;
 
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
+    function openModal(imageSrc) {
+        const img = document.getElementById('enlargedImg');
+        img.src = imageSrc;
+        currentZoom = 1;
+        img.style.transform = `scale(${currentZoom})`;
+        document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+
+    function zoomIn(e) {
+        e.stopPropagation();
+        currentZoom += 0.4; // Magnifies by 40% each click
+        document.getElementById('enlargedImg').style.transform = `scale(${currentZoom})`;
+    }
+
+    function zoomOut(e) {
+        e.stopPropagation();
+        if (currentZoom > 0.6) {
+            currentZoom -= 0.4;
+            document.getElementById('enlargedImg').style.transform = `scale(${currentZoom})`;
         }
-    </script>
+    }
+
+    function resetZoom(e) {
+        e.stopPropagation();
+        currentZoom = 1;
+        document.getElementById('enlargedImg').style.transform = `scale(1)`;
+    }
+</script>
 
 </body>
 
