@@ -71,30 +71,46 @@
             border-radius: 8px;
         }
 
-        .video-container {
-            max-width: 400px; 
+      .owner-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 20px;
+        }
+
+        .owner-pic {
+            width: 350px;
+            height: 700px;
+            object-fit: cover;
             border: 2px solid #ff0000;
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 16 / 9;
-            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .owner-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .owner-intro {
+            flex: 1;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .video-container {
+            flex: 1;
         }
 
         .video-container video {
             width: 100%;
             height: 100%;
-            display: block;
-            border-radius: 8px;
             border: 2px solid #ff0000;
+            border-radius: 10px;
+            object-fit: cover;
         }
-
-        .content-wrapper {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
 
     </style>
 
@@ -109,9 +125,28 @@
             <div class="text-box">
             <h1>Inside the Shop</h1> 
             </div>
-        <div class="video-container">
-            <video controls>ad.mp4</video>
-        </div>
+        <div class="owner-section">
+
+            <img src="owner.jpeg"
+                alt="Eddie"
+                classlass="owner-intro">
+                    <h2>Eddie Lugtu  |  Owner/Operator</h2>
+
+                    <p>
+                        I'm dedicated to providing top-tier paintless dent repair with a level of service that exceeds your expectations. 
+                        To back that up, I offer a simple guarantee: if you're not completely satisfied with the results, you won't be charged a dime. 
+                        Quality work and honest service are my personal commitments to every customer.
+                    </p>
+                </div>
+
+                <div class="video-container">
+                    <video controls>
+                        ad.mp4
+                    </video>
+                </div>
+
+            </div>
+
         </div>
 
 
