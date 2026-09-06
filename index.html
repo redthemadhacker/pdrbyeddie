@@ -23,7 +23,7 @@
 
         body {
            background-repeat: no-repeat;
-           background-position: top-left;
+           background-position: center;
            background-size: cover;
            background-color: #333333;
            overflow: hidden; 
@@ -35,16 +35,20 @@
         h1 {
            text-align: center;
            font-size: 50px;
-           margin-top: 40px;
+           white-space: nowrap;
+           max-width: 80%;
         }
 
           h3 {
            text-align: center;
            font-size: 40px;
+           white-space: nowrap;
+           max-width: 80%;
         }
 
         .button-box {
-           position: fixed;
+           position: absolute;
+           text-align: center;
            color: #ff0000;
            font-family: 'Oswald', sans-serif;
            font-size: clamp(14px, 0.85vw, 16px);
@@ -52,6 +56,9 @@
             bottom: 12px;
             display: flex;
             flex-direction: column;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 700px;
         }
 
         .nav-btn {
@@ -83,21 +90,24 @@
         }
         
         .home-container {
+            position: absolute;
             width: 90%;
-            max-width: 1400px;
+            max-width: 700px;
             margin: 30px auto 0 auto;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            transform: translateX(-50%);
         }
         
         .home-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(2rem, 4vw, 3rem);
             color: #ff0000;
-            margin: 40px 0 20px;
-            text-align: center;
+            margin-bottom: 10px;
+            direction: ltr;
+            unicode-bidi: normal;
         }
 
         .homepage-text, p, ul {
@@ -105,12 +115,11 @@
             font-size: clamp(1.5rem, 3vw, 1.5rem);
             line-height: 1.5;
             color: #000000;
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            margin-top: 5px;
         }
 
         ul {
