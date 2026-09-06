@@ -23,7 +23,7 @@
         }
 
         body {
-           background-repeat no-repeat;
+           background-repeat: no-repeat;
            background-position: top-left;
            background-size: cover;
            background-color: #333333;
@@ -37,13 +37,6 @@
            text-align: center;
            font-size: 50px;
            margin-top: 40px;
-        }
-        
-        p {
-           text-align: center;
-           position: relative;
-           font-size: clamp(14px, 0.85vw, 16px);
-           animation: glitch 0.8s infinite;
         }
 
         .button-box {
@@ -91,36 +84,35 @@
             75% { transform: translate(-3px, 5px); }
             100% { transform: translate(0,0); }
         }
-
+        
         .home-container {
-            position: absolute;
-            transform: translateX(-50%);
             width: 90%;
-            max-width: 700px;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-       }
+        }
         
         .home-title {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(2rem, 4vw, 3rem);
             color: #000000;
-            margin-bottom: 10px;
-            direction: ltr;
-            unicode-bidi: normal;
+            margin: 40px 0 20px;
+            text-align: center;
         }
 
-        .homepage-text {
+        .homepage-text, p, ul {
             font-family: 'Oswald', sans-serif;
             font-size: clamp(1rem, 2vw, 1.4rem);
             line-height: 1.5;
             color: #000000;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
         }
 
         .pinterest-icon {
@@ -138,12 +130,27 @@
             height: auto;
         }
 
-        .page-wrapper {
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .social-icons {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 5px; 
-            flex-wrap: nowrap;
-            margin-left: 42%;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hours {
+            text-align: center;
+            margin-top: 20px;
         }
 
     </style>
@@ -158,6 +165,8 @@
     <div class="home-container">
 
         <h1 class="home-title">PDR by Eddie</h1>
+
+        <h2 class="hours">Mon-Fri 9am-5pm</h2>
 
         <h2 class="homepage-text">
         Providing the highest quality paintless dent and hail damage repair since 1997. 
@@ -179,53 +188,19 @@
             we can pass those savings on to you, our valued customers.</p>
         </ul>
 
-            <div class="image-map">
-        
-            <a href="https://www.instagram.com/PDRbyEddie/" target="_blank" rel="noopener noreferrer">
-            
-            <img
-            
-            src="https://img.magnific.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?semt=ais_hybrid&w=740&q=80"
-            
-            alt="Instagram"
-            
-            class="instagram-icon">
-            
-            </a>
-        
-        </div>  
+            <div class="social-icons">
+                <a href="https://www.instagram.com/PDRbyEddie/" target="_blank">
+                instagram.jpg
+                </a>
 
-            <div class="image-map">
-        
-            <a href="https://www.twitter.com/PDRbyEddie" target="_blank" rel="noopener noreferrer">
-            
-            <img
-            
-            src="https://img.magnific.com/premium-vector/circle-twitter-x-logo-social-media-app-button_197792-9716.jpg?semt=ais_hybrid&w=740&q=80"
-            
-            alt="Twitter"
-            
-            class="twitter-icon">
-            
-            </a>
-        
-        </div> 
+                <a href="https://www.twitter.com/PDRbyEddie" target="_blank">
+                twitter.jpg
+                </a>
 
-            <div class="image-map">
-        
-            <a href="https://www.pinterest.com/PDRbyEddieLugtu/" target="_blank" rel="noopener noreferrer">
-            
-            <img
-            
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAkGOWae84cjLeDL0frA8GFlljoQv_fqhfXRZzJlo0g&s=10"
-            
-            alt="Pinterest"
-            
-            class="pinterest-icon">
-            
-            </a>
-        
-        </div> 
+                <a href="https://www.pinterest.com/PDRbyEddieLugtu/" target="_blank">
+                pinterest.jpg
+                </a>
+            </div>
 
     </div>    
 
