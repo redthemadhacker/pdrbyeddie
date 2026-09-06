@@ -82,7 +82,12 @@
             z-index: -1;
         }   
 
-
+        .content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
     </style>
 
@@ -93,14 +98,11 @@
 <body>
 
 
-    <div 
-    
-    class="text-box">
-         <h1>The Eddie Effect</h1>
-
-    </div>
-
-    <div
+        <div class="content-wrapper">
+            <div class="text-box">
+            <h1>The Eddie Effect</h1> 
+            </div>
+        </div>
     
     class="back-box">
          <a href="index.html" class="nav-btn">Home</a>

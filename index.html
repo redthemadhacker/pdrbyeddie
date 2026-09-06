@@ -38,10 +38,6 @@
            font-size: 50px;
            margin-top: 40px;
         }
-        @keyframes typing {
-             from { width: 0; }
-             to { width: 100%; }
-        }
 
         @keyframes blink {
              50% { border-color: transparent; }
@@ -52,15 +48,6 @@
            position: relative;
            font-size: clamp(14px, 0.85vw, 16px);
            animation: glitch 0.8s infinite;
-        }
-
-        @keyframes glitch {
-             0% { transform: none; }
-             20% { transform: skew(2deg); }
-             40% { transform: skew(-2deg); }
-             60% { transform: translateX(2px); }
-             80% { transform: translateX(-2px); }
-             100% { transform: none; }
         }
 
         .button-box {
