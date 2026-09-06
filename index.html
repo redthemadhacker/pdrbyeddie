@@ -21,10 +21,6 @@
            width: 100%;
         }
 
-        *, *:before, *:after {
-        box-sizing: inherit;
-    }
-
         body {
            background-repeat: no-repeat;
            background-position: top-left;
@@ -51,25 +47,16 @@
            position: fixed;
            color: #ff0000;
            font-family: 'Oswald', sans-serif;
-           font-size: 16px;
+           font-size: clamp(14px, 0.85vw, 16px);
             right: 12px;
             bottom: 12px;
             display: flex;
             flex-direction: column;
-            z-index: 100;
-            transform: translateX(50%);
         }
 
         .nav-btn {
             position: relative;
             overflow: hidden;
-            color: #ff0000;
-        text-decoration: none;
-        margin-top: 0;
-        padding: 4px 8px;
-        border-radius: 4px;
-        text-align: right;
-        background: rgba(0, 0, 0, 0.7);
         }
 
         .nav-btn:active::before {
@@ -98,12 +85,11 @@
         .home-container {
             width: 90%;
             max-width: 1400px;
-            margin: 20px auto 100px auto;
+            margin: 30px auto 0 auto;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 10px;
         }
         
         .home-title {
@@ -112,7 +98,6 @@
             color: #ff0000;
             margin: 40px 0 20px;
             text-align: center;
-            word-wrap: break-word;
         }
 
         .homepage-text, p, ul {
@@ -121,8 +106,9 @@
             line-height: 1.5;
             color: #000000;
             max-width: 800px;
-            margin: 10px auto;
+            margin: 0 auto;
             margin-left: auto;
+            margin-right: auto;
             text-align: center;
             margin-top: 5px;
         }
@@ -142,22 +128,20 @@
             justify-content: center;
             align-items: flex-start;
             gap: 30px;
-            flex-wrap: wrap; 
+            flex-wrap: nowrap; 
             width: 100%;
             max-width: 1400px;
             margin: 30px auto 20px auto; 
         }
 
         .feature {
-            width: 100%;
-            max-width: 300px;
+            width: 250px;
             text-align: center;
         }
 
         .feature img {
-            width: 100%;
-            height: auto;
-            max-height: 250px;
+            width: 250px;
+            height: 180px;
             object-fit: cover;
             border: 2px solid #ff0000;
             border-radius: 10px;
@@ -172,7 +156,6 @@
         .feature h4 {
             font-family: 'Oswald', sans-serif;
             font-size: 20px;
-            margin: 10px 0 5px;
         }
 
 .image-modal {
@@ -220,20 +203,19 @@
 }
 
 .image-modal img {
-    max-width: 95vw;
-    max-height: 90vh;
+    max-width: 90%;
+    max-height: 90%;
     border: 3px solid #ff0000;
     transition: transform 0.15s ease-out;
     cursor: grab;
-    border-radius: 8px;
-        object-fit: contain;
 }
 
-@media screen and (max-width: 768px) {
-        .features {
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
+                   /* Responsive Fix for Mobile Screens */
+       @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
     </style>
