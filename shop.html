@@ -71,45 +71,66 @@
             border-radius: 8px;
         }
 
-      .owner-section {
+        .layout-container {
             display: flex;
-            max-width: 1200px;
-            margin: 50px auto;
             gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            align-items: stretch;
         }
 
-        .owner-pic {
-            width: 50px;
-            height: 100px;
+        .owner-pic-box {
+            flex: 1;
+            border: 2px solid #b30000; 
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .owner-img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border: 2px solid #ff0000;
-            border-radius: 10px;
+            display: block;
         }
 
-        .owner-right {
+        .right-column {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .owner-intro {
-            flex: 1;
-            border: 2px solid #ff0000;
-            border-radius: 10px;
+        .owner-intro-box {
+            border: 2px solid #b30000;
             padding: 20px;
+            border-radius: 4px;
+            background-color: #fff;
         }
 
-        .video-container {
-            flex: 1;
+        .owner-intro-box h2 {
+            margin-top: 0;
+            color: #333;
         }
 
-        .video-container video {
+        .video-box {
+            border: 2px solid #b30000;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .video-box video {
             width: 100%;
             height: 100%;
-            border: 2px solid #ff0000;
-            border-radius: 10px;
-            object-fit: cover;
+            display: block;
+        }
+
+            /* Responsive Fix for Mobile Screens */
+        @media (max-width: 768px) {
+            .layout-container {
+                flex-direction: column;
+            }
         }
 
     </style>
@@ -125,28 +146,28 @@
             <div class="text-box">
             <h1>Inside the Shop</h1> 
             </div>
-        <div class="owner-section">
 
-            <img src="owner.jpeg"
-                alt="Eddie"
-                classlass="owner-intro">
-                    <h2>Eddie Lugtu  |  Owner/Operator</h2>
+        <div class="layout-container">
+        <div class="owner-pic-box">
+            <img src="owner.jpeg" alt="Eddie - Owner" class="owner-img">
+        </div>
 
-                    <p>
-                        I'm dedicated to providing top-tier paintless dent repair with a level of service that exceeds your expectations. 
-                        To back that up, I offer a simple guarantee: if you're not completely satisfied with the results, you won't be charged a dime. 
-                        Quality work and honest service are my personal commitments to every customer.
-                    </p>
-                </div>
-
-                <div class="video-container">
-                    <video controls>
-                        ad.mp4
-                    </video>
-                </div>
-
+        <div class="right-column">
+            <div class="owner-intro-box">
+            <h2>Eddie Lugtu  |  Owner/Operator</h2>
+            <p>
+                I'm dedicated to providing top-tier paintless dent repair with a level of service that exceeds your expectations. 
+                To back that up, I offer a simple guarantee: if you're not completely satisfied with the results, you won't be charged a dime. 
+                Quality work and honest service are my personal commitments to every customer.
+            </p>
+            </div>  
+            <div class="video-box">
+            <video controls poster="video-thumbnail.jpg">
+                <source src="ad.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             </div>
-
+        </div>
         </div>
 
 
