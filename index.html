@@ -115,21 +115,6 @@
             text-align: center;
         }
 
-        .pinterest-icon {
-            width: 40px; 
-            height: auto;
-        }
-
-        .instagram-icon {
-            width: 50px; 
-            height: auto;
-        }
-
-        .twitter-icon {
-            width: 50px; 
-            height: auto;
-        }
-
         ul {
             list-style: none;
             padding: 0;
@@ -140,12 +125,34 @@
             margin-top: 15px;
         }
 
-        .social-icons {
+        .features {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            max-width: 1400px;
+        }
+
+        .feature {
+            width: 300px;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .hours {
@@ -166,7 +173,7 @@
 
         <h1 class="home-title">PDR by Eddie</h1>
 
-        <h2 class="hours">Mon-Fri 9am-5pm</h2>
+        <h2 class="hours"><strong><em>Mon-Fri 9am-5pm</em>></strong>></h2>
 
         <h2 class="homepage-text">
         Providing the highest quality paintless dent and hail damage repair since 1997. 
@@ -176,31 +183,51 @@
         Specializing in restoration of crease dents, hail damage, parking lot dents and more!    
         </p>
 
-        <ul>
-            <li>Mobile On-Site Repairs</li>
-            <p>We come to your home, your business, or another location of your choice and 
-            return your vehicle to like-new condition in the comfort of your own surroundings.</p>
-            <li>Like-New Condition</li>
-            <p>The paintless dent repair process uses state of the art techniques to provide 
-            virtually undetectable repairs, returning your vehicle to like-new condition. </p>
-            <li>No Fixed-Site Overhead</li>
-            <p>Since we do not have the expenses involved in maintaining a fixed-site location, 
-            we can pass those savings on to you, our valued customers.</p>
-        </ul>
+        <div class="features">
 
-            <div class="social-icons">
-                <a href="https://www.instagram.com/PDRbyEddie/" target="_blank">
-                instagram.jpg
-                </a>
+        <div class="feature">
 
-                <a href="https://www.twitter.com/PDRbyEddie" target="_blank">
-                twitter.jpg
-                </a>
+            <img src="mobile.jpeg"
+                alt="Mobile On-Site Repairs">
 
-                <a href="https://www.pinterest.com/PDRbyEddieLugtu/" target="_blank">
-                pinterest.jpg
-                </a>
-            </div>
+            <h3>Mobile On-Site Repairs</h3>
+
+            <p>
+                We come to your home, your business, or another location of your choice
+                and return your vehicle to like-new condition in the comfort of your own surroundings.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <img src="new.jpeg"
+                alt="Like-New Condition">
+
+            <h3>Like-New Condition</h3>
+
+            <p>
+                The paintless dent repair process uses state of the art techniques to provide
+                virtually undetectable repairs, returning your vehicle to like-new condition.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <img src="overhead.jpeg"
+                alt="No Fixed-Site Overhead">
+
+            <h3>No Fixed-Site Overhead</h3>
+
+            <p>
+                Since we do not have the expenses involved in maintaining a fixed-site location,
+                we can pass those savings on to you, our valued customers.
+            </p>
+
+        </div>
+
+        </div>
 
     </div>    
 
