@@ -46,11 +46,11 @@
 
 
         .back-box {
-            position: fixed;
+           position: fixed;
             right: 12px;
             bottom: 12px;
             color: #000000;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Oswald' , sans-serif;
             flex-direction: column;
             display: flex;
 
@@ -299,6 +299,7 @@
 
     <div class="form-group">
             <label for="dent-photo">Attach Photo of Damage:</label>
+      <input type="file" name="photo" accept="image/*" capture="environment">
             <input type="file" name="photo" accept="image/*" multiple>
         </div>
 
