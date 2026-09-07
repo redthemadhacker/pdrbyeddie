@@ -4,16 +4,16 @@ Business website
 Professional business website for client. 
 ### Dependencies 
 * Linux Ubuntu 24.10, Github, VSCode, Heroku
-* Python, Flask, Gunicorn
+* Javascript, Python, Flask, Gunicorn
 ### Executing
-* Open in  https://pdrbyeddie.com
+* Open in  https://pdrbyeddie-c9dcdea3495f.herokuapp.com/index.html
 ### Help
-* Deploy: Issues deploying with Heroku due to site being written in HTML while Heroku automatically looks for Node.js. Added app.py, requirements.txt and Procfile with Python, Flask, and Gunicorn. 
+* Styling & Mobile Responsiveness: Fine-tuning the custom dark aesthetic required extensive trial-and-error CSS adjustments. Resolved persistent layout shifts, fixed-width overflow issues, and text overlay contrast across various viewports to ensure seamless horizontal centering and mobile readability.
 ### Authors
 * Amari James
 * [@redthemadhacker](https://github.com/redthemadhacker)
 ### Version History
 * 1.0
-    - Initial release 
+    - Live build on Heroku, awaiting client confirmation to connect and officially launch with owned domain.
 ### Acknowledgements 
 * Copilot 
