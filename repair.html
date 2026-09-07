@@ -140,6 +140,8 @@
             border-radius: 6px;
             cursor: pointer;
             margin-top: 10px;
+            font-family: 'Oswald', sans-serif;
+            transition: background 0.2s ease;
         }
 
         .button {
@@ -192,16 +194,22 @@
 
         .page-wrapper {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 5px; 
-            flex-wrap: nowrap;
-            margin-top: 60px;
-            margin-left: 42%;
+            gap: 15px; 
+            flex-wrap: wrap;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;
         }
 
                .nav-btn {
             position: relative;
             overflow: hidden;
+            color: #ff0000;
+            text-decoration: none;
+            margin-top: 5px;
+            text-align: right;
         }
 
         .nav-btn:active::before {
@@ -227,6 +235,18 @@
             100% { transform: translate(0,0); }
         }
 
+        .form-group input[type="file"] {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666666;
+        }
+
     </style>
 
 
@@ -242,7 +262,7 @@
 
     </div>
 
-  <form class="form"  action="https://formspree.io/f/mvkoqqje" method="POST">
+  <form class="form"  action="https://formspree.io/f/mvkoqqje" method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="name">Name:</label>
@@ -273,6 +293,11 @@
         <label for="message">Dent details:</label>
         <textarea id="message" name="message" rows="4" placeholder="Where is the dent located on the car?"></textarea>
     </div>
+
+    <div class="form-group">
+            <label for="dent-photo">Attach Photo of Damage:</label>
+            <input type="file" id="dent-photo" name="upload" accept="image/*" capture="environment">
+        </div>
 
     <button type="submit">Submit Request</button>
     </form>
