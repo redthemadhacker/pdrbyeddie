@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 
-
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"  rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
-
 
     <style>
 
-        
         html, body {
            margin: 0;
            padding: 0;
@@ -23,10 +19,10 @@
 
         body {
            background-repeat: no-repeat;
-           background-position: top-left;
+           background-position: top left;
            background-size: cover;
            background-color: #333333;
-           overflow: auto; 
+           overflow-y: auto; 
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
@@ -34,66 +30,106 @@
            justify-content: center;
            align-items: center;
            text-align: center;
-           
+           font-family: 'Oswald', sans-serif;
+           color: #ffffff;
+        }
+
+        .shadowbox {
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            text-shadow: 2px 2px 4px #000000;
+            color: #ff0000;
+            max-width: 900px;
+            width: 90%;
+            margin: auto;
+            text-align: left;
         }
 
         .text-box {
             text-align: center;
-            position: relative;
-            font-family: 'Oswald' sans-serif; 
-            top: 5%;
-            left: 5%;
-            color: #000000;
-            max-width: 1200px;
-            z-index: 5;
-            margin-top: 20px;
+            font-family: 'Oswald', sans-serif;
         }    
         
         h1 {
            text-align: center;
-           font-size: 50px;
-           white-space: nowrap;
+           font-size: 45px;
+           margin-top: 10px;
+           margin-bottom: 20px;
+           color: #ff0000;
+           text-shadow: 2px 2px 4px #000000;
         }
-   
 
         .back-box {
             position: fixed;
-            right: 12px;
-            bottom: 12px;
+            right: 15px;
+            bottom: 15px;
             color: #000000;
-            font-family: 'Oswald' , sans-serif;
-             flex-direction: column;
+            font-family: 'Oswald', sans-serif;
+            flex-direction: column;
             display: flex;
             align-items: center;
+            gap: 5px;
+            z-index: 1000;
         }
 
-         p {
-           font-size: 30px;
-           margin-bottom: 10px;
+        p {
+           font-size: 19px;
+           line-height: 1.5;
+           margin-bottom: 20px;
+           color: #ffffff;
+           text-shadow: 1px 1px 2px #000000;
         }
 
         ul {
             list-style-position: inside;
             padding: 0;
+            margin: 0;
         }
 
         li {
-            font-size: 25px;
-            margin-bottom: 10px;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        li strong {
+            color: #ff0000;
         }
 
         .content-container {
-            max-width: 1200px;
-            width: 90%;
-            text-align: center;
+            width: 100%;
+            text-align: left;
         }
 
-                   .nav-btn {
+        .nav-btn {
             position: relative;
-            overflow: auto;
-             font-size: 35px;            
-            min-height: 48px;   
+            overflow: hidden;
+            font-size: 26px;            
+            min-height: 40px;   
             line-height: 1.2;
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.85);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .nav-btn:hover {
+            background: #ff0000;
+            color: #000000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
         .nav-btn:active::before {
@@ -118,48 +154,58 @@
             75% { transform: translate(-3px, 5px); }
             100% { transform: translate(0,0); }
         }
-    </style>
 
+        @media (max-width: 768px) {
+            .shadowbox {
+                width: 95%;
+                padding: 15px 15px;
+                margin: 15px auto;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p, li {
+                font-size: 16px;
+            }
+
+            .nav-btn {
+                font-size: 20px;
+                padding: 4px 10px;
+            }
+        }
+
+    </style>
 
 </head>
 
-
 <body>
 
-    <div 
-    
-        class="text-box">
-        
-        <h1>How do you remove the dents?</h1>
-        <div class="content-container">
-        <p> Paintless Dent Repair (PDR) is all about using specialized tools and hand technique to physically manipulate 
-        metal back into its original factory shape—without damaging the clear coat or paint.</p>
-        <ul>
-            <li><strong>Specialized Steel Rods & Picks:</strong> We use dozens of custom-forged steel rods in different lengths, bends, 
-            and tip styles. These let us reach deep inside door panels, fenders, and roofs to carefully massage the metal out from behind.</li>
-            <li><strong>LED Reflector Boards:</strong>  To see every detail of the damage, we shine specialized LED boards on the panel. The 
-            reflected lines bend around the dent, showing us the exact micro-points that need to be adjusted.</li>
-            <li><strong>Glue-Pulling Systems:</strong> When we can't access the back of a panel, we use high-strength pulling tabs attached directly 
-            to the exterior. Using specialized lifters or slide hammers, we pull the metal up safely from the outside without touching your paint.</li>
-            <li><strong>Tap-Down & Knock-Down Tools:</strong> High spots are just as important as low spots. We use soft-tipped plastic or brass tools 
-            to gently tap down high edges, relaxing the tension in the metal so the whole panel flattens back out smoothly.</li>
-        </ul>    
-        </div>
+    <div class="shadowbox">
+        <div class="text-box">
+            <h1>How do you remove the dents?</h1>
+            <div class="content-container">
+                <p>Paintless Dent Repair (PDR) is all about using specialized tools and hand technique to physically manipulate metal back into its original factory shape—without damaging the clear coat or paint.</p>
+                <ul>
+                    <li><strong>Specialized Steel Rods & Picks:</strong> We use dozens of custom-forged steel rods in different lengths, bends, and tip styles. These let us reach deep inside door panels, fenders, and roofs to carefully massage the metal out from behind.</li>
+                    <li><strong>LED Reflector Boards:</strong> To see every detail of the damage, we shine specialized LED boards on the panel. The reflected lines bend around the dent, showing us the exact micro-points that need to be adjusted.</li>
+                    <li><strong>Glue-Pulling Systems:</strong> When we can't access the back of a panel, we use high-strength pulling tabs attached directly to the exterior. Using specialized lifters or slide hammers, we pull the metal up safely from the outside without touching your paint.</li>
+                    <li><strong>Tap-Down & Knock-Down Tools:</strong> High spots are just as important as low spots. We use soft-tipped plastic or brass tools to gently tap down high edges, relaxing the tension in the metal so the whole panel flattens back out smoothly.</li>
+                </ul>    
+            </div>
+        </div>    
+    </div>
 
-      </div>    
-
-        <div
-    
-            class="back-box">
-            <a href="pdr.html" class="nav-btn">Back</a>
-             <a href="index.html" class="nav-btn">Home</a>
-         <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
+    <div class="back-box">
+        <a href="pdr.html" class="nav-btn">Back</a>
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
         <a href="repair.html" class="nav-btn">The Repair Hotline</a>
+    </div>
 
-        </div>
-
+    <div class="bg"></div>
 
 </body>
-
 
 </html>
