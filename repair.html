@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-
 
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
-
 
     <style>
 
@@ -21,49 +18,39 @@
         }
 
         body {
-           color: #000000;
+           color: #ffffff;
            font-family: 'Oswald', sans-serif; 
            background-repeat: no-repeat;
-           background-position: center;
+           background-position: top left;
            background-size: cover;
            background-color: #333333;
            overflow: auto;
            position: relative;
-           margin: 0;
-           padding: 0;
            text-align: center;
            background-attachment: fixed;
-           /* (CONSTRUCTION) background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-OMaAal5Ljp8agQJbkM7PBLJFOW_HFdcR8nH3-GvFA&s=10"); */
-           background-image:  url("pdr.png");
+           background-image: url("pdr.png");
         }  
         
         h1 {
            text-align: center;
-           font-size: 50px;
-           margin-top: 40px;
+           font-size: 45px;
+           margin-top: 10px;
+           margin-bottom: 15px;
            color: #ff0000;
+           text-shadow: 2px 2px 4px #000000;
         }
-
 
         .back-box {
            position: fixed;
-            right: 12px;
-            bottom: 12px;
-            color: #000000;
-            font-family: 'Oswald' , sans-serif;
-            flex-direction: column;
-            display: flex;
-            align-items: center;
-            box-shadow: none !important;
-    text-shadow: none !important;
-    outline: none !important;
-        }
-
-        .service-btn {
-            border: 2px solid #000000;
-            border-radius: 15px;
-            padding: 5px;
-            background-color: #000000;
+           right: 15px;
+           bottom: 15px;
+           color: #000000;
+           font-family: 'Oswald', sans-serif;
+           flex-direction: column;
+           display: flex;
+           align-items: center;
+           gap: 5px;
+           z-index: 1000;
         }
 
         .bg {
@@ -74,34 +61,26 @@
             height: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: top-left;
+            background-position: top left;
             z-index: -1;
             background-image: url("pdr.png"); 
         }
 
-        body {
-        background: #0a0a0a;
-        color: #000000;
-        font-family: 'Oswald' , sans-serif;
-        padding: 40px;
-        text-align: center;
-        }
-
         form, .form {
             width: 90% !important;
-            max-width: 450px !important;
-            margin: 30px auto !important;
-            background: #111111;
+            max-width: 500px !important;
+            margin: 20px auto !important;
+            background: rgba(17, 17, 17, 0.9);
             padding: 25px; 
-            border-radius: 10px;
+            border-radius: 12px;
             border: 2px solid #ff0000;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             box-sizing: border-box;
         }
 
         .form-group {
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             display: flex;
             flex-direction: column;
             align-items: stretch;
@@ -109,10 +88,11 @@
 
         .form-group label {
             color: #ffffff;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: bold;
             margin-bottom: 6px;
             text-align: left;
+            text-shadow: 1px 1px 2px #000000;
         }
 
         .form-group input,
@@ -124,6 +104,7 @@
             color: #000000 !important;            
             border-radius: 6px;
             font-size: 15px;
+            font-family: 'Oswald', sans-serif;
             box-sizing: border-box;
         }
 
@@ -138,52 +119,41 @@
             background-color: #ff0000;
             color: #ffffff;
             padding: 12px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             margin-top: 10px;
             font-family: 'Oswald', sans-serif;
-            transition: background 0.2s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+            transition: background 0.2s ease, transform 0.1s ease;
         }
 
-        .button {
-            padding: 12px;
-            background: #ff0000;
-            color: #fff;
-            font-weight: 700;
-            border: none;
-            border-radius: 0px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Oswald', sans-serif;
-            transition: background 0.2s ease;
-            margin-top: 10px;
+        .form button:hover,
+        form button:hover {
+            background-color: #cc0000;
+            transform: scale(1.02);
         }
 
-        .button:hover {
-            background: #ff3333;
-        }
-
-        .facebook-icon {
-            width: 50px; 
-            height: auto;
-        }
-
-        .phone-icon {
-            width: 50px; 
-            height: auto;
-        }
-
-         .text-icon {
-            width: 50px; 
-            height: auto;
-        }
-
+        .facebook-icon,
+        .phone-icon,
+        .text-icon,
         .instagram-icon {
-            width: 50px; 
-            height: auto;
+            width: 45px; 
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .facebook-icon:hover,
+        .phone-icon:hover,
+        .text-icon:hover,
+        .instagram-icon:hover {
+            transform: scale(1.1);
         }
 
         .page-wrapper {
@@ -192,17 +162,34 @@
             align-items: center;
             gap: 15px; 
             flex-wrap: wrap;
-            margin: 30px auto;
+            margin: 20px auto;
             width: 90%;
             max-width: 600px;
         }
 
-               .nav-btn {
+        .nav-btn {
             position: relative;
             overflow: hidden;
-             font-size: 35px;           
-            min-height: 48px;   
+            font-size: 26px;            
+            min-height: 40px;   
             line-height: 1.2;
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.85);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .nav-btn:hover {
+            background: #ff0000;
+            color: #000000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
         .nav-btn:active::before {
@@ -235,164 +222,131 @@
             cursor: pointer;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #666666;
-        }
-
         .shadowbox {
             background: rgba(0, 0, 0, 0.75); 
-            padding: 30px 20px;
+            padding: 25px 20px;
             border-radius: 12px;
             border: 1px solid rgba(255, 0, 0, 0.5);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             box-sizing: border-box;
             text-shadow: 2px 2px 4px #000000;
-            color:#ff0000;
+            color: #ff0000;
+            max-width: 650px;
+            margin: 30px auto;
+        }
+
+        @media (max-width: 768px) {
+            .shadowbox {
+                width: 95%;
+                margin: 15px auto;
+                padding: 15px 10px;
+            }
+
+            .form, form {
+                width: 95% !important;
+                padding: 15px;
+            }
+
+            .nav-btn {
+                font-size: 20px;
+                padding: 4px 10px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
         }
 
     </style>
 
-
 </head>
-
 
 <body>
 
 <div class="shadowbox">
 
-     <div 
-    
-    class="text-box">
-         <h1>The Repair Hotline</h1>
-
+    <div class="text-box">
+        <h1>The Repair Hotline</h1>
     </div>
 
-  <form class="form"  action="https://formspree.io/f/mvkoqqje" method="POST" enctype="multipart/form-data">
+    <form class="form" action="https://formspree.io/f/mvkoqqje" method="POST" enctype="multipart/form-data">
 
-    <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Jane Doe">
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
-    </div>
-
-    <div class="form-group">
-        <label for="year">Vehicle Year:</label>
-        <input type="number" id="year" name="year" required placeholder="2026">
-    </div>
-
-    <div class="form-group">
-        <label for="make">Vehicle Make:</label>
-        <input type="text" id="make" name="make" required placeholder="Toyota">
-    </div>
-
-    <div class="form-group">
-        <label for="model">Vehicle Model:</label>
-        <input type="text" id="model" name="model" required placeholder="Camry XSE">
-    </div>
-
-    <div class="form-group">
-        <label for="message">Dent details:</label>
-        <textarea id="message" name="message" rows="4" placeholder="Where is the dent located on the car?"></textarea>
-    </div>
-
-    <div class="form-group">
-            <label for="dent-photo">Attach Photo of Damage:</label>
-      <input type="file" name="photo" accept="image/*" capture="environment">
-            <input type="file" name="photo" accept="image/*" multiple>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Doe">
         </div>
 
-    <button type="submit">Submit Request</button>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+        </div>
+
+        <div class="form-group">
+            <label for="year">Vehicle Year:</label>
+            <input type="number" id="year" name="year" required placeholder="2026">
+        </div>
+
+        <div class="form-group">
+            <label for="make">Vehicle Make:</label>
+            <input type="text" id="make" name="make" required placeholder="Toyota">
+        </div>
+
+        <div class="form-group">
+            <label for="model">Vehicle Model:</label>
+            <input type="text" id="model" name="model" required placeholder="Camry XSE">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Dent details:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Where is the dent located on the car?"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="dent-photo">Attach Photo of Damage:</label>
+            <input type="file" name="photo" accept="image/*" capture="environment">
+        </div>
+
+        <button type="submit">Submit Request</button>
     </form>
 
-  <div id="result"></div>
+    <div id="result"></div>
 
     <div class="page-wrapper">
-
         <div class="image-map">
-        
             <a href="tel:7068888625" class="spot spot-phone">
-            
-            <img
-            
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyK6My_K7xY6jrEHbdExcj_A7TTiU69wUMq5tTgHrRDJJPv3LlT3_mWM&s=10"
-            
-            alt="Phone"
-            
-            class="phone-icon">
-            
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyK6My_K7xY6jrEHbdExcj_A7TTiU69wUMq5tTgHrRDJJPv3LlT3_mWM&s=10" alt="Phone" class="phone-icon">
             </a>
-        
         </div>  
 
         <div class="image-map">
-        
             <a href="sms:7068888625?body=Hi!%20Here%20is%20a%20photo%20of%20my%20dent:" class="spot spot-text">
-            
-            <img
-            
-            src="https://thumbs.dreamstime.com/b/text-message-phone-icon-flat-vector-illustration-design-text-message-phone-icon-flat-vector-illustration-design-isolated-white-158418276.jpg"
-            
-            alt="Text"
-            
-            class="text-icon">
-            
+                <img src="https://thumbs.dreamstime.com/b/text-message-phone-icon-flat-vector-illustration-design-text-message-phone-icon-flat-vector-illustration-design-isolated-white-158418276.jpg" alt="Text" class="text-icon">
             </a>
-        
         </div>  
 
         <div class="image-map">
-        
             <a href="https://www.facebook.com/PDRbyEddie/" target="_blank" rel="noopener noreferrer">
-            
-            <img
-            
-            src="https://img.magnific.com/premium-vector/vector-facebook-social-media-icon-illustration_534308-21672.jpg?semt=ais_hybrid&w=740&q=80"
-            
-            alt="Facebook"
-            
-            class="facebook-icon">
-            
+                <img src="https://img.magnific.com/premium-vector/vector-facebook-social-media-icon-illustration_534308-21672.jpg?semt=ais_hybrid&w=740&q=80" alt="Facebook" class="facebook-icon">
             </a>
-        
         </div>  
 
-            <div class="image-map">
-        
+        <div class="image-map">
             <a href="https://www.instagram.com/PDRbyEddie/" target="_blank" rel="noopener noreferrer">
-            
-            <img
-            
-            src="https://img.magnific.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?semt=ais_hybrid&w=740&q=80"
-            
-            alt="Instagram"
-            
-            class="instagram-icon">
-            
+                <img src="https://img.magnific.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram" class="instagram-icon">
             </a>
-
         </div>    
-        
-
-        <div
-    
-        class="back-box">
-            <a href="index.html" class="nav-btn">Home</a>
-            <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
-        <a href="pdr.html" class="nav-btn">The PDR Promise</a>
-        </div>
-        
     </div>
 
-
-    <div class="bg"></div>
 </div>       
 
-</body>
+<div class="back-box">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
+    <a href="pdr.html" class="nav-btn">The PDR Promise</a>
+</div>
 
+<div class="bg"></div>
+
+</body>
 
 </html>

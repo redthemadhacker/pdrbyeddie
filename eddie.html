@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +23,7 @@
 
         body {
            background-repeat: no-repeat;
-           background-position: center;
+           background-position: top left;
            background-size: cover;
            background-color: #333333;
            overflow-y: auto; 
@@ -35,6 +34,7 @@
            color: #000000;
            text-align: center; 
            background-attachment: fixed;
+           background-image: url("pdr.png");
         }
 
         .text-box {
@@ -48,19 +48,25 @@
         
         h1 {
            text-align: center;
-           font-size: 50px;
+           font-size: 45px;
+           margin-top: 10px;
+           margin-bottom: 15px;
            color: #ff0000;
+           text-shadow: 2px 2px 4px #000000;
         }
 
         .back-box {
             position: fixed;
-            right: 12px;
-            bottom: 12px;
+            right: 15px;
+            bottom: 15px;
             color: #000000;
             font-family: 'Oswald' , sans-serif;
             flex-direction: column;
             display: flex;
             align-items: center;
+            gap: 5px;
+            z-index: 1000;
+            text-align: center;
         }
 
         ul {
@@ -76,7 +82,7 @@
             background-image: url("pdr.png");
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: top-left;
+            background-position: top left;
             z-index: -1;
         }  
         
@@ -219,20 +225,16 @@
     }
 
     .testimonial-form-box {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 25px;
-      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.75); 
+      padding: 30px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 0, 0, 0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      box-sizing: border-box;
+      text-shadow: 2px 2px 4px #000000;
+      color:#ff0000;
       max-width: 600px;
       margin: 0 auto;
-      background: rgba(0, 0, 0, 0.75); 
-            padding: 30px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            box-sizing: border-box;
-            text-shadow: 2px 2px 4px #000000;
-            color:#ff0000;
     }
 
     .testimonial-form-box form {
@@ -273,12 +275,29 @@
       }
     }
 
-         .nav-btn {
+        .nav-btn {
             position: relative;
             overflow: hidden;
-             font-size: 40px;          
-            min-height: 48px;   
+            font-size: 26px;            
+            min-height: 40px;   
             line-height: 1.2;
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.85);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .nav-btn:hover {
+            background: #ff0000;
+            color: #000000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
         .nav-btn:active::before {
@@ -319,10 +338,11 @@
             margin-bottom: 50px;
         }
 
-.google-review-btn:hover {
-    background-color: #cc0000;
-    transform: scale(1.03);
-}
+        .google-review-btn:hover {
+            background-color: #cc0000;
+            transform: scale(1.03);
+        }
+
         .facebook-review-btn {
             display: inline-block;
             margin-top: 5px;
@@ -344,13 +364,32 @@
 
         .shadowbox {
           background: rgba(0, 0, 0, 0.75); 
-            padding: 30px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            box-sizing: border-box;
-            text-shadow: 2px 2px 4px #000000;
-            color:#ff0000;
+          padding: 30px 20px;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-sizing: border-box;
+          text-shadow: 2px 2px 4px #000000;
+          color:#ff0000;
+          max-width: 900px;
+          margin: 30px auto;
+        }
+
+        @media (max-width: 768px) {
+            .shadowbox {
+                width: 95%;
+                margin: 15px auto;
+                padding: 15px 10px;
+            }
+
+            .nav-btn {
+                font-size: 20px;
+                padding: 4px 10px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
         }
 
     </style>
@@ -362,12 +401,8 @@
 <body>
 
 <div class="shadowbox">
-    <div 
-    
-    class="text-box">
-
-    <h1>The Eddie Effect</h1>
-
+    <div class="text-box">
+        <h1>The Eddie Effect</h1>
     </div>
 
     <section class="gallery-testimonial-page">
@@ -468,7 +503,6 @@
     <h2 class="title">Word on the Street</h2>
 
     <div id="review-widget">
-      <!-- PASTE_YOUR_WIDGET_CODE_HERE -->
     </div>
 
     <div class="testimonials-list">
@@ -554,13 +588,11 @@
     </div>
     <a href="https://www.google.com/search?q=pdr+by+eddie+google+profile&oq=pdr+by+&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIGCAEQRRg7MggIAhBFGCcYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyNjQwajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x88f3493548d2cdad:0x4bbd6e38dfd22261,1,,,," target="_blank" rel="noopener noreferrer" class="google-review-btn">
           Read More on Google Reviews ★★★★★
-        </a>
-      </div>
-      <a href="https://www.facebook.com/PDRbyEddie/reviews" target="_blank" rel="noopener noreferrer" class="facebook-review-btn">
-          Read More on Facebook Reviews ★★★★★
-        </a>
-      </div>
-      
+    </a>
+  </div>
+  <a href="https://www.facebook.com/PDRbyEddie/reviews" target="_blank" rel="noopener noreferrer" class="facebook-review-btn">
+      Read More on Facebook Reviews ★★★★★
+  </a>
 
     <div class="testimonial-form-box">
       <h3>Leave Your Review</h3>
@@ -582,21 +614,15 @@
 </section>
 </div>
 
-    <div
-    
-    class="back-box">
-         <a href="index.html" class="nav-btn">Home</a>
-        <a href="pdr.html" class="nav-btn">The PDR Promise</a>
-        <a href="repair.html" class="nav-btn">The Repair Hotline</a>
+<div class="back-box">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="pdr.html" class="nav-btn">The PDR Promise</a>
+    <a href="repair.html" class="nav-btn">The Repair Hotline</a>
+</div>
 
-    </div>
-
-    <div class="bg"></div>
-
-
+<div class="bg"></div>
 
 </body>
 
 
 </html>
-

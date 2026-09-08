@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
-
 
     <style>
 
         html, body {
            margin: 0;
            padding: 0;
-           height: 100%;
+           min-height: 100vh;
            width: 100%;
+           overflow-x: hidden;
         }
 
         body {
            background-repeat: no-repeat;
            background-position: top-left;
            background-size: cover;
-           background-color: #333333;
-           overflow: hidden; 
+           background-color: #111111;
+           overflow-y: auto; 
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
-        }
-         
-        h1 {
-           text-align: center;
-           font-size: 50px;
-           margin-top: 40px;
-        }
-
-          h3 {
-           text-align: center;
-           font-size: 40px;
+           font-family: 'Oswald', sans-serif;
+           box-sizing: border-box;
         }
 
         .button-box {
-           position: fixed;
-            right: 12px;
-            bottom: 12px;
-            color: #000000;
-            font-family: 'Oswald', sans-serif;
-            flex-direction: column;
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
+            gap: 12px;
+            padding: 20px 10px 0 10px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 100;
+            box-sizing: border-box;
         }
 
         .nav-btn {
             position: relative;
             overflow: hidden;
-            font-size: 35px;           
-            min-height: 48px;   
+            background: rgba(0, 0, 0, 0.85);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            padding: 8px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 22px;
             line-height: 1.2;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .nav-btn:hover {
+            background: #ff0000;
+            color: #000000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
         .nav-btn:active::before {
@@ -83,241 +91,201 @@
             75% { transform: translate(-3px, 5px); }
             100% { transform: translate(0,0); }
         }
-        
+
         .home-container {
             width: 90%;
-            max-width: 1400px;
-            margin: 30px auto 0 auto;
+            max-width: 1100px;
+            margin: 20px auto 40px auto;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(0, 0, 0, 0.75); 
-            padding: 30px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 0, 0, 0.5);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85); 
+            padding: 30px 25px;
+            border-radius: 16px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
             box-sizing: border-box;
-            text-shadow: 2px 2px 4px #000000;
+            backdrop-filter: blur(4px);
         }
-        
+
         .home-title {
             font-family: 'Oswald', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
             color: #ff0000;
-            margin: 40px 0 20px;
+            margin: 10px 0 20px;
             text-align: center;
-            text-shadow: 2px 2px 4px #000000;
+            text-shadow: 2px 2px 8px #000000;
+            letter-spacing: 1px;
         }
 
-        .homepage-text, p, ul {
+        .homepage-text, p {
             font-family: 'Oswald', sans-serif;
-            font-size: clamp(1.5rem, 3vw, 1.5rem);
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             line-height: 1.5;
             color: #ffffff;
-            max-width: 800px;
-            margin: 0 auto;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 850px;
+            margin: 5px auto;
             text-align: center;
-            margin-top: 5px;
+            text-shadow: 1px 1px 4px #000000;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            font-weight: bold;
-            margin-top: 10px;
+        h3.homepage-text {
+            font-size: 2.2rem;
+            color: #ff0000;
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .features {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            gap: 30px;
-            flex-wrap: nowrap; 
+            align-items: stretch;
+            gap: 25px;
+            flex-wrap: wrap; 
             width: 100%;
-            max-width: 1400px;
-            margin: 30px auto 20px auto; 
+            margin: 25px auto 10px auto; 
+            box-sizing: border-box;
         }
 
         .feature {
-            width: 250px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
             text-align: center;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
         }
 
         .feature img {
-            width: 250px;
+            width: 100%;
             height: 180px;
             object-fit: cover;
             border: 2px solid #ff0000;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: transform 0.2s ease;
         }
 
         .feature img:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .feature h4 {
             font-family: 'Oswald', sans-serif;
-            font-size: 20px;
+            font-size: 22px;
             color: #ff0000;
+            margin: 12px 0 8px 0;
+            text-transform: uppercase;
         }
 
-.image-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+        .feature p {
+            font-size: 1.1rem;
+            color: #dddddd;
+        }
 
-.zoom-controls {
-    position: absolute;
-    top: 20px;
-    z-index: 10000;
-    display: flex;
-    gap: 10px;
-}
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.95);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
-.zoom-controls button {
-    background: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 10px 18px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Oswald', sans-serif;
-}
+        .zoom-controls {
+            position: absolute;
+            top: 20px;
+            z-index: 10000;
+            display: flex;
+            gap: 10px;
+        }
 
-.img-wrapper {
-    width: 90vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; 
-}
+        .zoom-controls button {
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
 
-.image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 3px solid #ff0000;
-    transition: transform 0.15s ease-out;
-    cursor: grab;
-}
+        .img-wrapper {
+            width: 90vw;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto; 
+        }
 
-       @media (max-width: 768px) {
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid #ff0000;
+            border-radius: 8px;
+            transition: transform 0.15s ease-out;
+            cursor: grab;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            .button-box {
+                gap: 8px;
+            }
+
+            .nav-btn {
+                font-size: 18px;
+                padding: 6px 12px;
+            }
+
             .features {
                 flex-direction: column;
                 align-items: center;
             }
-            .home-container {
-                margin-top: 300px; 
-                padding-top: 300px;
+
+            .feature {
+                width: 100%;
+                max-width: 100%;
             }
 
-            .home-title {
-                margin-top: 10px;
+            .home-container {
+                margin-top: 15px;
+                padding: 20px 15px;
+                width: 92%;
             }
         }
 
     </style>
 
-
 </head>
 
-
 <body>
-
-
-    <div class="home-container">
-
-        <h1 class="home-title"><strong><em>Dents Out/Doors Open: Mon-Fri 9am-5pm</em></strong></h1>
-
-        <h2 class="homepage-text">
-        Providing the highest quality paintless dent and hail damage repair since 1997. 
-        </h2>
-        <p>
-        Columbus' Premier Provider of quick and affordable dent repair for all makes and models. 
-        Specializing in restoration of crease dents, hail damage, parking lot dents and more!    
-        </p>
-
-        <h3 class="homepage-text">Why us?</h3>
-
-        <div class="features">
-
-        <div class="feature">
-
-            <img src="mobile.jpeg"
-                alt="Mobile On-Site Repairs">
-
-            <h4>Mobile On-Site Repairs</h4>
-
-            <p>
-                We come to your home, your business, or another location of your choice
-                and return your vehicle to like-new condition in the comfort of your own surroundings.
-            </p>
-
-        </div>
-
-        <div class="feature">
-
-            <img src="new.jpeg"
-                alt="Like-New Condition">
-
-            <h4>Like-New Condition</h4>
-
-            <p>
-                The paintless dent repair process uses state of the art techniques to provide
-                virtually undetectable repairs, returning your vehicle to like-new condition.
-            </p>
-
-        </div>
-
-        <div class="feature">
-
-            <img src="overhead.jpeg"
-                alt="No Fixed-Site Overhead">
-
-            <h4>No Fixed-Site Overhead</h4>
-
-            <p>
-                Since we do not have the expenses involved in maintaining a fixed-site location,
-                we can pass those savings on to you, our valued customers.
-            </p>
-
-        </div>
-
-        </div>
-
-    </div>    
-
-  <div id="imageModal" class="image-modal">
-    <div class="zoom-controls">
-        <button onclick="zoomIn(event)">+</button>
-        <button onclick="zoomOut(event)">–</button>
-        <button onclick="resetZoom(event)">Reset</button>
-        <button onclick="closeModal()">✕ Close</button>
-    </div>
-    <div class="img-wrapper" onclick="event.stopPropagation()">
-        <img id="enlargedImg" src="" alt="Enlarged View">
-    </div>
-</div>
 
     <div class="button-box">
         <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
@@ -325,45 +293,101 @@
         <a href="repair.html" class="nav-btn">The Repair Hotline</a>
     </div>
 
+    <div class="home-container">
+
+        <h1 class="home-title"><strong><em>Dents Out / Doors Open: Mon-Fri 9am-5pm</em></strong></h1>
+
+        <h2 class="homepage-text">
+            Providing the highest quality paintless dent and hail damage repair since 1997. 
+        </h2>
+        <p>
+            Columbus' Premier Provider of quick and affordable dent repair for all makes and models. 
+            Specializing in restoration of crease dents, hail damage, parking lot dents and more!    
+        </p>
+
+        <h3 class="homepage-text">Why Us?</h3>
+
+        <div class="features">
+
+            <div class="feature">
+                <img src="mobile.jpeg" alt="Mobile On-Site Repairs" onclick="openModal(this.src)">
+                <h4>Mobile On-Site Repairs</h4>
+                <p>
+                    We come to your home, your business, or another location of your choice
+                    and return your vehicle to like-new condition in the comfort of your own surroundings.
+                </p>
+            </div>
+
+            <div class="feature">
+                <img src="new.jpeg" alt="Like-New Condition" onclick="openModal(this.src)">
+                <h4>Like-New Condition</h4>
+                <p>
+                    The paintless dent repair process uses state of the art techniques to provide
+                    virtually undetectable repairs, returning your vehicle to like-new condition.
+                </p>
+            </div>
+
+            <div class="feature">
+                <img src="overhead.jpeg" alt="No Fixed-Site Overhead" onclick="openModal(this.src)">
+                <h4>No Fixed-Site Overhead</h4>
+                <p>
+                    Since we do not have the expenses involved in maintaining a fixed-site location,
+                    we can pass those savings on to you, our valued customers.
+                </p>
+            </div>
+
+        </div>
+
+    </div>    
+
+    <div id="imageModal" class="image-modal">
+        <div class="zoom-controls">
+            <button onclick="zoomIn(event)">+</button>
+            <button onclick="zoomOut(event)">–</button>
+            <button onclick="resetZoom(event)">Reset</button>
+            <button onclick="closeModal()">✕ Close</button>
+        </div>
+        <div class="img-wrapper" onclick="event.stopPropagation()">
+            <img id="enlargedImg" src="" alt="Enlarged View">
+        </div>
     </div>
 
- <script>
-    let currentZoom = 1;
+    <script>
+        let currentZoom = 1;
 
-    function openModal(imageSrc) {
-        const img = document.getElementById('enlargedImg');
-        img.src = imageSrc;
-        currentZoom = 1;
-        img.style.transform = `scale(${currentZoom})`;
-        document.getElementById('imageModal').style.display = 'flex';
-    }
+        function openModal(imageSrc) {
+            const img = document.getElementById('enlargedImg');
+            img.src = imageSrc;
+            currentZoom = 1;
+            img.style.transform = `scale(${currentZoom})`;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
 
-    function closeModal() {
-        document.getElementById('imageModal').style.display = 'none';
-    }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
 
-    function zoomIn(e) {
-        e.stopPropagation();
-        currentZoom += 0.4; // Magnifies by 40% each click
-        document.getElementById('enlargedImg').style.transform = `scale(${currentZoom})`;
-    }
-
-    function zoomOut(e) {
-        e.stopPropagation();
-        if (currentZoom > 0.6) {
-            currentZoom -= 0.4;
+        function zoomIn(e) {
+            e.stopPropagation();
+            currentZoom += 0.4;
             document.getElementById('enlargedImg').style.transform = `scale(${currentZoom})`;
         }
-    }
 
-    function resetZoom(e) {
-        e.stopPropagation();
-        currentZoom = 1;
-        document.getElementById('enlargedImg').style.transform = `scale(1)`;
-    }
-</script>
+        function zoomOut(e) {
+            e.stopPropagation();
+            if (currentZoom > 0.6) {
+                currentZoom -= 0.4;
+                document.getElementById('enlargedImg').style.transform = `scale(${currentZoom})`;
+            }
+        }
+
+        function resetZoom(e) {
+            e.stopPropagation();
+            currentZoom = 1;
+            document.getElementById('enlargedImg').style.transform = `scale(1)`;
+        }
+    </script>
 
 </body>
-
 
 </html>
