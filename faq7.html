@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 
-
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"  rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>PDR by Eddie</title>
     <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg/v1/fill/w_300,h_282,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/90a441_4d23b88c0ab3440d938b6f61b6dd045f~mv2.jpg">
 
-
     <style>
-        
+
         html, body {
            margin: 0;
            padding: 0;
@@ -22,10 +19,10 @@
 
         body {
            background-repeat: no-repeat;
-           background-position: top-left;
+           background-position: top left;
            background-size: cover;
            background-color: #333333;
-           overflow: auto; 
+           overflow-y: auto; 
            position: relative;
            background-attachment: fixed;
            background-image: url("pdr.png");
@@ -33,70 +30,109 @@
            justify-content: center;
            align-items: center;
            text-align: center;
-           
+           font-family: 'Oswald', sans-serif;
+           color: #ffffff;
+        }
+
+        .shadowbox {
+            background: rgba(0, 0, 0, 0.75); 
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            text-shadow: 2px 2px 4px #000000;
+            color: #ff0000;
+            max-width: 900px;
+            width: 90%;
+            margin: auto;
+            text-align: left;
         }
 
         .text-box {
             text-align: center;
-            position: relative;
-            font-family: 'Oswald' sans-serif; 
-            top: 5%;
-            left: 5%;
-            color: #000000;
-            max-width: 1200px;
-            z-index: 5;
-            margin-top: 20px;
-            overflow: auto;
+            font-family: 'Oswald', sans-serif;
             overflow-wrap: break-word;
-    word-break: break-word;
+            word-break: break-word;
         }    
         
         h1 {
            text-align: center;
-           font-size: 50px;
-           white-space: nowrap;
+           font-size: 40px;
+           margin-top: 10px;
+           margin-bottom: 20px;
+           color: #ff0000;
+           text-shadow: 2px 2px 4px #000000;
+           white-space: normal;
         }
-   
 
         .back-box {
             position: fixed;
-            right: 12px;
-            bottom: 12px;
+            right: 15px;
+            bottom: 15px;
             color: #000000;
             font-family: 'Oswald', sans-serif;
-             flex-direction: column;
+            flex-direction: column;
             display: flex;
             align-items: center;
+            gap: 5px;
+            z-index: 1000;
         }
 
-
-         p {
-           font-size: 30px;
-           margin-bottom: 10px;
+        p {
+           font-size: 19px;
+           line-height: 1.5;
+           margin-bottom: 20px;
+           color: #ffffff;
+           text-shadow: 1px 1px 2px #000000;
         }
 
         ul {
             list-style-position: inside;
             padding: 0;
+            margin: 0;
         }
 
         li {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000000;
+        }
+
+        li strong {
+            color: #ff0000;
         }
 
         .content-container {
-            max-width: 1200px;
-            width: 90%;
-            text-align: center;
+            width: 100%;
+            text-align: left;
         }
 
-                   .nav-btn {
+        .nav-btn {
             position: relative;
-            overflow: auto;
-            font-size: 35px;           
-            min-height: 48px;   
+            overflow: hidden;
+            font-size: 26px;            
+            min-height: 40px;   
             line-height: 1.2;
+            padding: 6px 16px;
+            background: rgba(0, 0, 0, 0.85);
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .nav-btn:hover {
+            background: #ff0000;
+            color: #000000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
         .nav-btn:active::before {
@@ -122,50 +158,57 @@
             100% { transform: translate(0,0); }
         }
 
-    </style>
+        @media (max-width: 768px) {
+            .shadowbox {
+                width: 95%;
+                padding: 15px 15px;
+                margin: 15px auto;
+            }
 
+            h1 {
+                font-size: 28px;
+            }
+
+            p, li {
+                font-size: 16px;
+            }
+
+            .nav-btn {
+                font-size: 20px;
+                padding: 4px 10px;
+            }
+        }
+
+    </style>
 
 </head>
 
-
 <body>
 
-    <div 
-    
-        class="text-box">
-        
-        <h1>Why choose PDR by Eddie over a local <br> dent repair shop?</h1>
-        <div class="content-container">
-        <p> We bring the repair shop directly to you. All of our work is done at a location convenient for you—whether 
-        that’s at your home, your workplace, or a local partner shop. Because we operate mobile and don't carry the massive 
-        overhead costs of running a fixed physical shop, we pass those direct savings right on to you.</p>
-        <ul>
-            <li><strong>We Come to You:</strong> No taking time off work, arranging rides, or sitting in a busy waiting room. 
-            We repair your vehicle wherever it’s parked.</li>
-            <li><strong>Lower Prices, Higher Quality:</strong> Without high shop rent and utility bills, you get top-tier repair 
-            work at a fraction of the cost of a traditional brick-and-mortar location.</li>
-            <li><strong>Same-Day Service:</strong> While local body shops often keep your car for days, our mobile setup allows us 
-            to get most jobs completed in 30 minutes to 2 hours right in your driveway.</li>
-            <li><strong>100% Guaranteed Inspection:</strong> Just like all our repairs, we inspect the damage on-site and give you a 
-            final estimate before we ever touch the metal.</li>
-        </ul>    
-        </div>
+    <div class="shadowbox">
+        <div class="text-box">
+            <h1>Why choose PDR by Eddie over a local dent repair shop?</h1>
+            <div class="content-container">
+                <p>We bring the repair shop directly to you. All of our work is done at a location convenient for you—whether that’s at your home, your workplace, or a local partner shop. Because we operate mobile and don't carry the massive overhead costs of running a fixed physical shop, we pass those direct savings right on to you.</p>
+                <ul>
+                    <li><strong>We Come to You:</strong> No taking time off work, arranging rides, or sitting in a busy waiting room. We repair your vehicle wherever it’s parked.</li>
+                    <li><strong>Lower Prices, Higher Quality:</strong> Without high shop rent and utility bills, you get top-tier repair work at a fraction of the cost of a traditional brick-and-mortar location.</li>
+                    <li><strong>Same-Day Service:</strong> While local body shops often keep your car for days, our mobile setup allows us to get most jobs completed in 30 minutes to 2 hours right in your driveway.</li>
+                    <li><strong>100% Guaranteed Inspection:</strong> Just like all our repairs, we inspect the damage on-site and give you a final estimate before we ever touch the metal.</li>
+                </ul>    
+            </div>
+        </div>    
+    </div>
 
-      </div>    
-
-        <div
-    
-            class="back-box">
-            <a href="pdr.html" class="nav-btn">Back</a>
-             <a href="index.html" class="nav-btn">Home</a>
-         <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
+    <div class="back-box">
+        <a href="pdr.html" class="nav-btn">Back</a>
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="eddie.html" class="nav-btn">The Eddie Effect</a>
         <a href="repair.html" class="nav-btn">The Repair Hotline</a>
+    </div>
 
-
-        </div>
-
+    <div class="bg"></div>
 
 </body>
-
 
 </html>
