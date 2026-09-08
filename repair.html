@@ -269,7 +269,7 @@
         <h1>The Repair Hotline</h1>
     </div>
 
-    <form class="form" action="https://formspree.io/f/mvkoqqje" method="POST" enctype="multipart/form-data">
+    <form id="repairForm" class="form" action="https://formspree.io/f/mvkoqqje" method="POST" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="name">Name:</label>
@@ -309,6 +309,17 @@
         <button type="submit">Submit Request</button>
     </form>
 
+    <div id="successMessage" style="display: none; text-align: center; margin: 20px auto; background: rgba(17, 17, 17, 0.9); padding: 25px; border-radius: 12px; border: 2px solid #ff0000; box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); max-width: 500px; box-sizing: border-box;">
+        <h2>✅ REQUEST SENT!</h2>
+
+        <p style="color:white;">
+            Thank you for your submission.<br>
+            We have received your request.
+        </p>
+
+        <a href="https://pdrbyeddie-c9dcdea3495f.herokuapp.com/repair.html" target="_blank" class="nav-btn" style="margin-top: 10px;">RETURN TO WEBSITE</a>
+    </div>
+
     <div id="result"></div>
 
     <div class="page-wrapper">
@@ -346,6 +357,33 @@
 </div>
 
 <div class="bg"></div>
+
+<script>
+  document.getElementById("repairForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    
+    try {
+      let response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form.");
+    }
+  });
+</script>
 
 </body>
 
