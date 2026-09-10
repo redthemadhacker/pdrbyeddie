@@ -1,6 +1,6 @@
 # PDR by Eddie
 ## Commercial Business Website
-Commercial website project built with HTML, CSS, and JavaScript, then deployed live on Heroku for a local Paintless Dent Repair business. To serve the static frontend seamlessly on Heroku without Node.js, the backend was configured using Python, Flask, and Gunicorn to handle routing. Features an interactive flip-card gallery with a full-screen image expansion modal, custom glitch CSS hover effects, and a Formspree-powered hotline form configured with mobile camera support so customers can send direct photo quote requests. 
+Professional business website for Eddie Lugtu. Exhibits paintless dent repair services, customer reviews, project gallery, and online repair request forms for Eddie Lugtu. 
 ### Dependencies 
 * Linux Ubuntu 24.10, Github, VSCode, Heroku
 * Javascript, Python, Flask, Gunicorn
