@@ -5,7 +5,7 @@ Professional business website for Eddie Lugtu. Exhibits paintless dent repair se
 * Linux Ubuntu 24.10, Github, VSCode, Heroku
 * Javascript, Python, Flask, Gunicorn
 ### Executing
-* Open in  https://pdrbyeddie-c9dcdea3495f.herokuapp.com/index.html
+* Open in  https://pdrbyeddie.com
 ### Help
 * Styling & Mobile Responsiveness: Fine-tuning the custom dark aesthetic required extensive trial-and-error CSS adjustments. Resolved persistent layout shifts, fixed-width overflow issues, and text overlay contrast across various viewports to ensure seamless horizontal centering and mobile readability.
 ### Authors
