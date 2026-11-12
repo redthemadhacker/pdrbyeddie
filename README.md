@@ -13,6 +13,6 @@ Professional business website for Eddie Lugtu. Exhibits paintless dent repair se
 * [@redthemadhacker](https://github.com/redthemadhacker)
 ### Version History
 * 1.0
-    - Live build on Heroku, awaiting client confirmation to connect and officially launch with owned domain.
+    - Live build on Heroku, configured with SSL certificate for custom domain.
 ### Acknowledgements 
 * Copilot 
